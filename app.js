@@ -1,10 +1,26 @@
-document.write("Erdal <br>");
-document.write("Tasar <br>");
-document.write("fenerbahce");
 
+// ! object
 
-let a = 10;
-let b = 5;
-console.log("a+b = "+(a+b));
+let insan = {
+    isim:"Erdal",
+    yas:21,
+    id:1
+}
 
-alert("2 sayinin toplami : "+(a+b));
+console.log(insan);
+
+// ! List
+
+let dizi = [1,2,3,"f",true,5.2];
+
+console.log(typeof dizi);
+console.log(dizi);
+
+// ! function
+
+let func = function(){
+    console.log("Hello world");
+}
+
+console.log(typeof func);
+console.log(func);
