@@ -1,19 +1,22 @@
-let sayi = Number(prompt("sayi giriniz : "));
+// Seciciler
 
-r = 0;
-if (sayi == 2) {
-    console.log("sayi asal !");
-}else{
-    for (let index = 2; index < sayi; index++) {
-        if (sayi%index==0) {
-            r=1;
-            break
-        }
-    }
+// ! classname , id , tag name
 
-    if (r == 1) {
-        console.log("sayi asal degil !");
-    }else{
-        console.log("sayi asal !");
-    }
-}
+// ? getElementById : id'ye göre elementi yakalar
+
+
+let button;
+
+
+button = document.getElementById("todoAddButton");
+
+
+button.textContent = "<b> Todo Ekleyin </b>"; // html elementlerini okuyamaz
+
+button.innerHTML = "<b> Todo Ekleyin </b>"; // html elementlerini okur.
+
+
+
+
+
+console.log(button);
