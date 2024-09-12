@@ -1,31 +1,30 @@
-// HTML Elementleri üzerinde gezinmek.
+// dinamik olarak element oluşturmak
 
-const todo = document.querySelector(".list-group-item");
-const todoList = document.querySelector(".list-group");
+const cardBody = document.querySelectorAll(".card-body")[1];
+const listGroup = document.querySelector(".list-group");
 
-const card = document.querySelector(".card");
+const link = document.createElement("a");
 
-
-let value;
-
-// anneden çocuklara erişmek
-
-value = todoList;
-value = todoList.children;
+link.id = "GoGoogle";
+link.className="btn btn-dark btn-sm mt-3";
+link.href="https://www.google.com/"
+link.target="_blank"
+link.innerHTML="Google'a git"
 
 
-// çocuktan anneye erişmek
+const li = document.createElement("li");
+li.className="list-group-item d-flex justify-content-between";
+li.innerHTML="Todo 5";
 
-value = todo;
-let ul = todo.parentElement;
-let cardBody = ul.parentElement;
+const a = document.createElement("a");
+a.className="delete-item";
+a.href="#"
 
-
-// kardeşler arasında gezinmek
-
-value = todo;
-value = todo.nextElementSibling;
-value = value.previousElementSibling
+const i = document.createElement("i");
+i.className="fa fa-remove";
 
 
-console.log(value);
+a.appendChild(i);
+li.appendChild(a);
+
+listGroup.appendChild(li);
