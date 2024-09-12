@@ -2,21 +2,13 @@
 
 // ! classname , id , tag name
 
-// ? getElementById : id'ye göre elementi yakalar
 
+const todoList = Array.from(document.getElementsByClassName("list-group-item"));
 
-let button;
-
-
-button = document.getElementById("todoAddButton");
-
-
-button.textContent = "<b> Todo Ekleyin </b>"; // html elementlerini okuyamaz
-
-button.innerHTML = "<b> Todo Ekleyin </b>"; // html elementlerini okur.
+todoList.forEach(todo => {
+    console.log(todo.textContent);
+});
 
 
 
-
-
-console.log(button);
+console.log(todoList);
