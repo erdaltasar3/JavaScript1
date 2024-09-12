@@ -1,14 +1,31 @@
-// Seciciler
+// HTML Elementleri üzerinde gezinmek.
 
-// ! classname , id , tag name
+const todo = document.querySelector(".list-group-item");
+const todoList = document.querySelector(".list-group");
 
-
-const todoList = Array.from(document.getElementsByClassName("list-group-item"));
-
-todoList.forEach(todo => {
-    console.log(todo.textContent);
-});
+const card = document.querySelector(".card");
 
 
+let value;
 
-console.log(todoList);
+// anneden çocuklara erişmek
+
+value = todoList;
+value = todoList.children;
+
+
+// çocuktan anneye erişmek
+
+value = todo;
+let ul = todo.parentElement;
+let cardBody = ul.parentElement;
+
+
+// kardeşler arasında gezinmek
+
+value = todo;
+value = todo.nextElementSibling;
+value = value.previousElementSibling
+
+
+console.log(value);
