@@ -1,6 +1,3 @@
-const todoList = document.querySelector(".list-group");
-const todos = document.querySelectorAll(".list-group-item");
-
-
-todos[0].remove();
-console.log(todos);
+function changeTitle(){
+    document.querySelectorAll(".card-title")[1].textContent="Todo Basligi Degisti";
+}
